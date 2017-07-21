@@ -4,25 +4,18 @@
 import random
 import math
 import monPremierPackage.nombre
-# On reste dans la boucle tant que l'utilisateur
-# n'a pas saisi un entier
-estUnEntier = True
-while estUnEntier:
-    mise = input("Combien voulez-vous miser: ")
-    # sous-programme vériant si mise est un entier
-    test = monPremierPackage.nombre.verifEntier(mise)
-    if test == False:
-        estUnEntier = False # permet de sortir de la boucle
 
-mise = int(mise)
+mise = monPremierPackage.nombre.saisirEntier("Combien voulez-vous miser: ")
 
-# les commentaires sont les mêmes que dans la boucle précédante
-estUnEntier = True
-while estUnEntier:
-    nombreJoueur = input("Choisissez un nombre entre 0 et 49: ")
-    test = monPremierPackage.nombre.verifEntier(nombreJoueur)
-    if test == False:
-        estUnEntier = False
+# Choisir un nombre entre 0 et 49
+# On vérifie si la saisie est un entier
+# On vérifie que le nombre est compris entre 0 et 50
+entreeCorrecte = False
+while not entreeCorrecte:
+    nombreJoueur = monPremierPackage.nombre.saisirEntier(
+        "Choisissez un nombre entre 0 et 49: ")
+    if 0<= nombreJoueur <= 50:
+        entreeCorrecte = True
 
 # le jeu à roulette tourne...
 nombreRoulette = random.randrange(50)
