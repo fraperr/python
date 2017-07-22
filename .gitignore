@@ -1,0 +1,14 @@
+bissextile.py
+chaine.py
+erreur.py
+.*.swp
+multipli.py
+modele.py
+__pycache__/**
+.ropeproject/**
+test.py
+monPremierPackage/__pycache__/**
+monPremierPackage/.ropeproject/**
+
+monPremierPackage/__pycache__/nombre.cpython-35.pyc
+francois/
